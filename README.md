@@ -1,22 +1,52 @@
- Web-Scraping--Portfolio
- A curated collection of Python-based web scraping tools and projects that automate data extraction, cleaning, and export from real-world websites like e-commerce, job boards, and book catalogs.
-Advanced Book Web Scraper
+📘 Advanced Book Web Scraper
 
- Overview
-This Python scraper extracts detailed book data from [BooksToScrape.com](https://books.toscrape.com), demonstrating advanced scraping techniques like pagination, user-agent rotation, error handling, and logging. Ideal for building real-world scraping projects or freelance gigs.
+A powerful, production-ready Python scraper that extracts structured book data (title, price, availability) from [BooksToScrape.com](https://books.toscrape.com). This project showcases advanced scraping features such as pagination, polite scraping practices, logging, and clean CSV export — all designed for real-world freelance or business use cases.
 
- Features
-- Multi-page scraping with customizable page limit (CLI support)
-- - Polite scraping: custom headers & randomized delays
-  - - Robust error handling & logging for troubleshooting
-    - - Output clean CSV file ready for analysis or client delivery
-     
-      -  Tech Stack
-      - - Python 3.x
-        - - requests, BeautifulSoup4, pandas
-          - - logging module for progress and error tracking
-           
-            -  Usage
-            - ```bash
-              pip install -r requirements.txt
-              python book_scraper_pro.py --pages 10
+---
+
+ 🔍 Project Purpose
+
+This repository is part of my **Web Scraping Portfolio** — a curated collection of professional-grade Python scraping tools that automate data collection from various domains like e-commerce, job boards, and product catalogs.
+
+---
+
+ 💡 Features
+
+- ✅ Multi-page scraping (pagination supported)
+- ✅ Customizable page limits via CLI
+- ✅ Polite scraping (randomized delay, headers)
+- ✅ Robust error handling and logging
+- ✅ Structured data export to CSV
+- ✅ Clean, production-ready code with comments
+
+---
+
+ 🛠 Tech Stack
+
+| Tool          | Purpose                          |
+|---------------|----------------------------------|
+| `requests`    | Fetches raw HTML content         |
+| `BeautifulSoup` | Parses and navigates HTML       |
+| `pandas`      | Stores and exports structured data |
+| `logging`     | Tracks process and errors        |
+| `argparse`    | Handles command-line arguments   |
+
+---
+ 🧪 Sample Output
+
+All book data is saved in a clean CSV format: `books_multi_page.csv`
+
+| Title                  | Price   | Availability |
+|------------------------|---------|--------------|
+| A Light in the Attic   | £51.77  | In stock     |
+| Tipping the Velvet     | £53.74  | In stock     |
+
+---
+
+ ⚙️ Usage
+
+ 🔧 Step 1 – Install requirements
+```bash
+pip install requests beautifulsoup4 pandas
+python book_scraper_pro.py --pages 5
+
